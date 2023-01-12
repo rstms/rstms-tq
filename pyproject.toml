@@ -1,0 +1,62 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+requires_python = ">=3.10"
+
+
+
+[project]
+name = "rstms-tq"
+authors = [{name = "Matt Krueger", email = "mkrueger@rstms.net"}]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+keywords = ["tq"]
+classifiers = [
+  "Intended Audience :: Developers",
+
+  "Natural Language :: English", 
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10"
+]
+dynamic = ["version", "description"] 
+
+dependencies = [
+  "tomli"
+]
+
+[tool.flit.module]
+name = "tq"
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "bump2version",
+  "coverage",
+  "isort",
+  "flake8",
+  "flake8-length",
+  "pytest",
+  "python-box",
+  "toml",
+  "tox"
+]
+docs = [
+  "m2r2",
+  "sphinx",
+  "sphinx-click",
+  "sphinx-rtd-theme"
+]
+
+[project.urls]
+Home = "https://github.com/rstms/tq"
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+[tool.pytest]
+collect_ignore = ['setup.py']
+
+
+[project.scripts]
+tq = "tq:tq"
