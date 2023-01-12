@@ -41,9 +41,7 @@ $(current_release): dist
 	  echo "Version $(version) is already released"; \
 	else \
 	  echo "Creating $(project) release v$(version)..."; \
-	  echo "latest_release_version=$(latest_release_version)"; \
 	  $(RELEASE) create --tag-name v$(version) --force >$@; \
-	  echo "create passed"
 	  $(RELEASE) upload --force >>$@; \
 	fi
 
