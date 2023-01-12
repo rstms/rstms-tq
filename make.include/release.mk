@@ -35,6 +35,7 @@ dist: $(if $(DISABLE_TOX),,tox)
 
 $(current_release): dist
 	$(call check_wheel)
+	echo "release!"
 	@set -e;\
 	if [ "$(latest_release_version)" = "$(version)" ]; then \
 	  echo "Version $(version) is already released"; \
