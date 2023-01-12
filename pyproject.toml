@@ -25,7 +25,7 @@ dependencies = [
 ]
 
 [tool.flit.module]
-name = "tq"
+name = "rstms_tq"
 
 [project.optional-dependencies]
 dev = [
@@ -48,7 +48,7 @@ docs = [
 ]
 
 [project.urls]
-Home = "https://github.com/rstms/tq"
+Home = "https://github.com/rstms/rstms-tq"
 [tool.black]
 line-length = 79
 
@@ -59,4 +59,4 @@ collect_ignore = ['setup.py']
 
 
 [project.scripts]
-tq = "tq:tq"
+tq = "rstms_tq:tq"
