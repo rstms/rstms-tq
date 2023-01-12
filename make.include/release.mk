@@ -42,7 +42,7 @@ $(current_release): dist
 	else \
 	  echo "Creating $(project) release v$(version)..."; \
 	  echo "latest_release_version=$(latest_release_version)"; \
-	  $(RELEASE) create --force >$@; \
+	  $(RELEASE) create --tag-name v$(version) --force >$@; \
 	  $(RELEASE) upload --force >>$@; \
 	fi
 
