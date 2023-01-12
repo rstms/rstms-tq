@@ -2,5 +2,5 @@
 
 from .tq import tq
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     exit(tq())
