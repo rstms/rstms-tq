@@ -21,7 +21,8 @@ classifiers = [
 dynamic = ["version", "description"] 
 
 dependencies = [
-  "tomli"
+  "tomli",
+  "toml"
 ]
 
 [tool.flit.module]
@@ -37,7 +38,6 @@ dev = [
   "flake8-length",
   "pytest",
   "python-box",
-  "toml",
   "tox"
 ]
 docs = [
